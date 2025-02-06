@@ -1,11 +1,11 @@
 class ExpressError extends Error {
-    constructor(statusCode, msg) {
+    constructor(statusCode, message) {
         super(); 
         // Calls the parent class constructor
         // It initializes the parent Error class.
         // This ensures the Error object (including its message and stack trace) is created properly.
         this.statusCode = statusCode;
-        this.msg = msg;
+        this.message = message;
     }
 }
 

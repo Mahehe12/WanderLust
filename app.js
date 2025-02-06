@@ -105,12 +105,8 @@ app.all("*", (req, res, next) => {
 
 // Wrong Data Insert Error Handling Middle Ware ↓
 app.use((err, req, res, next) => {
-    let statusCode = err.statusCode || 500;
-    let message = err.message || "Something went wrong!";
-
-    console.error("Error:", err); // Debugging log
-
-    res.status(statusCode).render("error", { statusCode, message });
+    let { statusCode = 500, message = "Something went wrong!" } = err;
+    res.status(statusCode).render("error", { message });
 });
 
 
