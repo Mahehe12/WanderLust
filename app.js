@@ -100,14 +100,19 @@ app.use("/listings/:id/reviews", reviewRouter); // Using the router with reviews
 app.use("/", userRouter);// Using the router with user
 
 app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "Page not found!")).render()
+    next(new ExpressError(404, "Page not found!"));
 });
 
 // Wrong Data Insert Error Handling Middle Ware ↓
 app.use((err, req, res, next) => {
-    let { statusCode = 500, msg = "Something Went Wrong..." } = err;
-    res.status(statusCode).render("error.ejs", { msg });
+    let statusCode = err.statusCode || 500;
+    let message = err.message || "Something went wrong!";
+
+    console.error("Error:", err); // Debugging log
+
+    res.status(statusCode).render("error", { statusCode, message });
 });
+
 
 app.listen(8080, () => {
     console.log(`Server is listening at port 8080`);
