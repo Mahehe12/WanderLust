@@ -1,0 +1,239 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navbar */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+    margin-left: 12px;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400;
+    color: #222222;
+}
+
+.listing-link {
+    text-decoration: none !important;
+    color: #222222;
+}
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New Page */
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page */
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Listing description styling */
+.listing-description {
+    font-size: 15px;
+}
+
+.long-text {
+    display: none;
+}
+
+.listing-description.show-more .long-text {
+    display: inline;
+}
+
+.listing-description.show-more .dots {
+    display: none;
+}
+
+.show-more-link {
+    cursor: pointer;
+    color: #222222;
+    text-decoration-line: underline;
+    font-weight: 700;
+}
+
+.arrow {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Price card stylings */
+.pricing-card {
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.new-price {
+    color: #d32323;
+    font-weight: bold;
+}
+
+.dates {
+    margin-bottom: 16px;
+}
+
+.date-row {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.check-in,
+.check-out {
+    text-align: center;
+    flex: 1;
+}
+
+.check-in {
+    border-right: 1px solid #e4e4e4;
+}
+
+.guests {
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.reserve-btn {
+    width: 100%;
+    background-color: #fe424d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.reserve-btn:hover {
+    background-color: #e53a42;
+}
+
+.disclaimer {
+    text-align: center;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.card-text-location,
+.card-text-country {
+    text-align: center;
+    flex: 1;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px !important;
+    font-weight: bold;
+}
+
+#map {
+    height: 400px;
+}
