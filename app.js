@@ -103,26 +103,11 @@ app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page not found!")).render()
 });
 
-// Erro handling middleware
+// Wrong Data Insert Error Handling Middle Ware ↓
 app.use((err, req, res, next) => {
-    let { statusCode = 500, message } = err;
-
-    if (statusCode === 404) {
-        return res.status(404).render("listings/random.ejs", {
-            err,
-            statusCode,
-            message: message || "Page Not Found!"
-        });
-    }
-
-    console.error(err); // Log the actual error for debugging
-
-    return res.status(statusCode).render("error.ejs", {
-        statusCode,
-        message: message || "Something went wrong!"
-    });
+    let {statusCode = 500, message = "Something Went Wrong..."} = err;
+    res.status(statusCode).render("error.ejs", { message });
 });
-
 
 app.listen(8080, () => {
     console.log(`Server is listening at port 8080`);
