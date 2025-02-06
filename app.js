@@ -95,6 +95,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings"); // Redirect root URL to "/listings"
+});
+
 app.use("/listings", listingRouter); // Using the router with listings
 app.use("/listings/:id/reviews", reviewRouter); // Using the router with reviews
 app.use("/", userRouter);// Using the router with user
